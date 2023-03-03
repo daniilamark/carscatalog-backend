@@ -1,0 +1,19 @@
+type Car {
+    id: ID!,
+    number: String,
+    mark: String,
+    color: String,
+    yearRelease: String,
+    bodyType: String,
+    gearboxType: String,
+    maxSpeed: String,
+    driveUnit: String
+}
+type Query {
+    getCarById(id:ID!):Car
+    getAllCars:[Car]
+}
+type Mutation {
+    createCar(number: String!, mark: String!, color: String, yearRelease: String,
+        bodyType: String, gearboxType: String, maxSpeed: String, driveUnit: String):Car
+}
